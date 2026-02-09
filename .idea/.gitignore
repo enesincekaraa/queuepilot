@@ -6,3 +6,14 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
+# IntelliJ IDEA dosyaları
+.idea/
+*.iml
+out/
+gen/
+
+# Diğer sistem ve geçici dosyalar
+.DS_Store
+target/
+.env
