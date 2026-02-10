@@ -1,0 +1,22 @@
+server:
+  port: ${GATEWAY_PORT}
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: identity-service
+              uri: ${IDENTITY_SERVICE_URL}
+              predicates:
+                - Path=/api/identity/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
